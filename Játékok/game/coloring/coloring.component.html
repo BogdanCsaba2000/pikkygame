@@ -1,0 +1,17 @@
+<div class="coloring-game">
+    <h2>Színezd ki a képet!</h2>
+    
+    <div class="canvas-container">
+      <canvas #coloringCanvas width="500" height="500"></canvas>
+    </div>
+    
+    <div class="color-palette">
+      <button *NgFor="let color of colors" 
+              [style.backgroundColor]="color" 
+              (click)="selectColor(color)">
+      </button>
+    </div>
+    
+    <button (click)="clearCanvas()">Törlés</button>
+    <button (click)="loadImage()">Kép betöltése</button>
+</div>
